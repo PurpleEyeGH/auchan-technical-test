@@ -16,7 +16,7 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    public Flux<BookDTO> getProducts() {
+    public Flux<BookDTO> getBooks() {
         return bookRepository.findAll().map(BookDTO::fromEntity);
     }
 
