@@ -13,7 +13,7 @@ import java.util.UUID;
 public class Author {
 
     @Id
-    private UUID id;
+    private String id;
     private String name;
     private Gender gender;
     private List<Book> books;
