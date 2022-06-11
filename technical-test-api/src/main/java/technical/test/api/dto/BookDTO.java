@@ -5,13 +5,12 @@ import lombok.NoArgsConstructor;
 import technical.test.api.entity.Book;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Data
 @NoArgsConstructor
 public class BookDTO {
 
-    private UUID id;
+    private String id;
     private String title;
     private String authorName;
     private LocalDateTime publicationDate;
