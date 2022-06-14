@@ -1,0 +1,3 @@
+[submodule "auchan-tech-test-renderer"]
+	path = auchan-tech-test-renderer
+	url = https://github.com/cblokkeel/auchan-tech-test-renderer

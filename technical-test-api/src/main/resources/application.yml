@@ -3,6 +3,11 @@ spring:
     name: technical-test-api
   main:
     web-application-type: reactive
+  data:
+    mongodb:
+      database: auchandb
+      port: 27017
+      host: localhost
 
 server:
   port: 8080
