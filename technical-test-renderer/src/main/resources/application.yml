@@ -3,4 +3,6 @@ spring:
     name: technical-test-renderer
 
 server:
-  port: 8081
+  port: 8082
+  
+spring.thymeleaf.cache: false
