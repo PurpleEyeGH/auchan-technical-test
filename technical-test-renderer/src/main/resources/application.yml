@@ -1,6 +1,13 @@
 spring:
   application:
     name: technical-test-renderer
-
+  thymeleaf:
+    cache: false
+  web:
+    resources:
+      static-locations: classpath:/images/
 server:
   port: 8081
+
+api:
+  url: localhost:8080

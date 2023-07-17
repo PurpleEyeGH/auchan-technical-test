@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<head>
+    <title>Library</title>
+</head>
+
+<body>
+<div class="header">
+    <img class="logo" src="logo.png" alt="Logo" th:src="@{logo.png}">
+    <h1 class="title">Book List</h1>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publication Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book : ${books}">
+        <td th:text="${book.title}"></td>
+        <td th:text="${book.authorName}"></td>
+        <td th:utext="${#temporals.format(book.publicationDate, 'dd/MM/yyyy')}"></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="3" class="center-button">
+            <div class="button-container">
+                <form action="/add-book-form" method="get">
+                    <button type="submit">Add a book</button>
+                </form>
+
+                <form action="/add-author-form" method="get">
+                    <button type="submit">Add an author</button>
+                </form>
+            </div>
+        </td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 5px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        text-align: left;
+        padding: 8px;
+        font-family: Arial, sans-serif;
+    }
+
+    td {
+        padding: 8px;
+        font-family: Arial, sans-serif;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f7f7f7;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    .logo {
+        float: left;
+        margin-right: 10px;
+        width: 50px;
+    }
+
+    .title {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-container form {
+        margin-right: 10px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+
+</style>
