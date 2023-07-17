@@ -6,11 +6,10 @@
         <groupId>fr.auchanretailfrance</groupId>
         <artifactId>technical-test</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/>
+        <relativePath>..</relativePath>
     </parent>
 
     <artifactId>technical-test-renderer</artifactId>
-    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
@@ -47,6 +46,13 @@
             <artifactId>reactor-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>fr.auchanretailfrance</groupId>
+            <artifactId>technical-test-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
     <build>

@@ -3,6 +3,8 @@ spring:
     name: technical-test-api
   main:
     web-application-type: reactive
-
+  data:
+    mongodb:
+        uri: mongodb://admin:secret@localhost:27017/library
 server:
   port: 8080

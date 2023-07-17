@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<head>
+  <title>Add an author</title>
+</head>
+
+<div class="header">
+  <img class="logo" src="logo.png" alt="Logo" th:src="@{logo.png}">
+  <h1 class="title">Add an author</h1>
+</div>
+
+<body>
+<form action="#" th:action="@{/addAuthor}" th:object="${author}" method="post">
+
+  <input type="hidden" id="authorId" th:field="*{id}">
+
+  <div>
+    <label for="authorName">Author's name:</label>
+    <input type="text" id="authorName" th:field="*{name}" >
+  </div>
+
+
+  <div class="radio-group">
+    <label for="authorGender">Author's gender:</label>
+    <div>
+      <label>
+        <input type="radio" th:field="*{gender}" th:value="true" > Male
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio" th:field="*{gender}" th:value="false" > Female
+      </label>
+    </div>
+  </div>
+
+  <div>
+    <button type="submit">Add Author</button>
+  </div>
+
+</form>
+</body>
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+  form {
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .logo {
+    float: left;
+    margin-right: 10px;
+    width: 50px;
+  }
+</style>
+
+
+
+
